@@ -23,8 +23,8 @@ const markup = ingredients.map(ingredient => {
 //   console.log(...markup);
 //   console.log(markup.join(""));
 
-// ingredientsList.append(markup);
-// ingredientsList.insertAdjacentHTML("beforeend", ...markup);
+// ingredientsList.append(...markup);
+// ingredientsList.insertAdjacentHTML("beforeend", markup);                                        // jak robic zeby insertAdjacentHTML dzialalo?
 
 
 
