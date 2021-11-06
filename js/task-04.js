@@ -6,20 +6,13 @@ const value = qs("span#value");
 const update = (e) => {
   if (e.target.nodeName !== "BUTTON") {
     return;
-  }
-  const action = e.target.dataset.action;
-  console.log("action:", action);
-
-  action === "increment" ? increase() : decrease();
+  }  
+  e.target.dataset.action === "increment" ? increase() : decrease();
 };
 
-const increase = () => {
-  value.innerHTML++;
-};
+const increase = () => value.innerHTML++;
 
-const decrease = () => {
-  value.innerHTML--;
-};
+const decrease = () => value.innerHTML--;
 
 //delegowanie zdarzen - do wspólnego przodka dodawany jest jeden handler, zamiast dodawania handlera do każdego elementu
 counter.addEventListener("click", update);
@@ -39,10 +32,8 @@ counter.addEventListener("click", update);
 //   if (e.target.nodeName !== "BUTTON") {
 //     return;
 //   }
-//   const action = e.target.dataset.action;
-//   console.log("action:", action);
-
-//   switch (action) {
+//   
+//   switch (e.target.dataset.action) {
 //     case "increment":
 //       increase();
 //       break;
@@ -52,13 +43,9 @@ counter.addEventListener("click", update);
 //   }
 // };
 
-// const increase = () => {
-//   value.innerHTML++;
-// };
+// const increase = () => value.innerHTML++;
 
-// const decrease = () => {
-//   value.innerHTML--;
-// };
+// const decrease = () => value.innerHTML--;
 
 // //delegowanie zdarzen - do wspólnego przodka dodawany jest jeden handler, zamiast dodawania handlera do każdego elementu
 // counter.addEventListener("click", update);
