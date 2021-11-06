@@ -3,9 +3,11 @@
 
 ## General info
 
+:star: document.querySelector
+
 :star: console.log()
 
-:star: for
+:star: for, forEach
 
 :star: document.createElement()
 
