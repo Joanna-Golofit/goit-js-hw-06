@@ -13,9 +13,29 @@ const images = [
   },
 ];
 
-let galleryList = document.querySelector("ul.gallery");
-const markup = images
-  .map(image => `<li><img src=${image.url} alt=${image.alt} height="280"></li>`)
-  .join("");
 
-galleryList.insertAdjacentHTML("afterbegin", markup);
+const gallery = document.querySelector("ul.gallery");
+
+const markup = images
+  .map(({ url, alt }) => `<li><img src="${url}" alt="${alt}"></li>`)
+  .join("") // jesli nie dam join to bedzie widac przecinki na stronie
+
+  console.log(markup);
+gallery.insertAdjacentHTML("afterbegin", markup);
+
+
+
+
+
+
+
+
+
+
+// pierwsza wersja
+// const galleryList = document.querySelector("ul.gallery");
+// const markup = images
+//   .map(image => `<li><img src=${image.url} alt=${image.alt} height="280"></li>`)
+//   .join("");
+
+// galleryList.insertAdjacentHTML("afterbegin", markup);
