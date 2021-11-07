@@ -13,6 +13,8 @@
 
 :star: insertAdjacentHTML()
 
+:star: addEventListener and event delegation
+
 :star: and many more for a wormup..
 
 
