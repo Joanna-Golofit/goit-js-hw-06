@@ -2,7 +2,7 @@ const ingredients = [
   'Potatoes',
   'Mushrooms',
   'Garlic',
-  'Tomatos',
+  'Tomatoes',
   'Herbs',
   'Condiments',
 ];
@@ -10,7 +10,7 @@ const ingredients = [
 
 const ingredientsList = document.querySelector("ul#ingredients");
 
-const markup = ingredients.map(ingredient => {
+ingredients.map(ingredient => {
   const li = document.createElement("li");
   li.setAttribute("class", "nature"); // najpierw setAttribute a potem classList dziala, bo inaczej nadpisuje klase
   li.classList.add("item");
@@ -18,13 +18,11 @@ const markup = ingredients.map(ingredient => {
   console.log(li);
   ingredientsList.append(li);
 
-  return li; // zeby cos w markupie zostalo
 });
 //   console.log(...markup);
 //   console.log(markup.join(""));
 
 // ingredientsList.append(...markup);
-// ingredientsList.insertAdjacentHTML("beforeend", markup);                                        // jak robic zeby insertAdjacentHTML dzialalo?
 
 
 
